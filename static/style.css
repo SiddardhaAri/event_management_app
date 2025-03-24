@@ -1,124 +1,133 @@
-/* Global Styles */
+/* Reset default margin and padding */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: Arial, sans-serif;
 }
 
+/* Centering the form container */
+.auth-container {
+    width: 350px;
+    margin: 80px auto;
+    padding: 20px;
+    background: #fffbf5;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;  /* Left-align labels */
+}
+
+/* Page background */
 body {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: linear-gradient(135deg, #74ebd5, #9face6);
-    padding: 20px;
+    background-color: #f0f5ff;
 }
 
-/* Authentication Container */
-.auth-container {
-    width: 100%;
-    max-width: 380px;
-    padding: 25px;
-    background: rgba(255, 255, 255, 0.9);
-    border-radius: 12px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    text-align: left;
-    animation: fadeIn 0.5s ease-in-out;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; transform: scale(0.9); }
-    to { opacity: 1; transform: scale(1); }
-}
-
+/* Form heading */
 .auth-container h2 {
     text-align: center;
-    font-size: 24px;
+    font-size: 22px;
     margin-bottom: 15px;
-    color: #333;
+    color: #5a189a;
 }
 
+/* Flash messages */
 .flash-message {
-    background: #d4edda;
-    color: #155724;
-    padding: 12px;
-    border-radius: 8px;
-    margin-bottom: 15px;
+    background: #ffe5ec;
+    color: #9d0208;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
     text-align: center;
-    font-weight: bold;
 }
 
+/* Labels */
 .auth-container label {
     display: block;
-    font-size: 15px;
+    font-size: 14px;
     margin-bottom: 5px;
-    font-weight: 600;
-    color: #555;
+    font-weight: bold;
+    color: #240046;
 }
 
+/* Input fields */
 .auth-container input {
     width: 100%;
-    padding: 10px;
-    border: 2px solid #ccc;
-    border-radius: 8px;
+    padding: 8px;
+    border: 1px solid #b5838d;
+    border-radius: 5px;
     margin-bottom: 15px;
-    transition: 0.3s;
+    background: #ffebf0;
 }
 
-.auth-container input:focus {
-    border-color: #007bff;
-    outline: none;
-}
-
+/* Buttons */
 .auth-container button {
     width: 100%;
-    padding: 12px;
-    background: #007bff;
+    padding: 10px;
+    background: #9d4edd;
     border: none;
     color: white;
     font-size: 16px;
-    font-weight: bold;
     cursor: pointer;
-    border-radius: 8px;
+    border-radius: 5px;
     margin-top: 10px;
-    transition: 0.3s;
 }
 
 .auth-container button:hover {
-    background: #0056b3;
-    transform: scale(1.05);
+    background: #7b2cbf;
+}
+
+/* Links */
+.auth-container p {
+    text-align: center;
+    margin-top: 15px;
 }
 
 .auth-container a {
-    color: #007bff;
+    color: #ff006e;
     text-decoration: none;
     font-weight: bold;
-    transition: 0.3s;
 }
 
 .auth-container a:hover {
     text-decoration: underline;
-    color: #0056b3;
 }
 
-/* Event List Container */
+/* ================= Event List Page Styling ================= */
+
+/* General Page Container */
 .container {
-    max-width: 650px;
-    padding: 25px;
-    background: rgba(255, 255, 255, 0.95);
-    border-radius: 12px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #fff0f3;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
 
+/* Centered Header */
 .header {
+    text-align: center;
     font-size: 26px;
     margin-bottom: 20px;
-    font-weight: bold;
-    color: #444;
+    color: #ff006e;
 }
 
+/* Flash Message Styling */
+.flash-message {
+    background: #ffee32;
+    color: #ff5400;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* Button Styling */
 .button-container {
     display: flex;
     justify-content: center;
@@ -127,34 +136,97 @@ body {
 }
 
 .btn {
-    padding: 12px 18px;
+    padding: 10px 15px;
+    color: white;
+    text-decoration: none;
     font-size: 14px;
-    border-radius: 8px;
+    border-radius: 5px;
+    text-align: center;
     border: none;
     cursor: pointer;
-    transition: 0.3s ease-in-out;
 }
 
-.blue { background: #007bff; color: white; }
-.blue:hover { background: #0056b3; transform: scale(1.05); }
+.blue { background: #ff006e; }
+.blue:hover { background: #d90368; }
 
-.green { background: #28a745; color: white; }
-.green:hover { background: #1e7e34; transform: scale(1.05); }
+.green { background: #06d6a0; }
+.green:hover { background: #028090; }
 
-.red { background: #dc3545; color: white; }
-.red:hover { background: #bd2130; transform: scale(1.05); }
+.red { background: #f71735; }
+.red:hover { background: #c1121f; }
 
-/* Event Table */
+/* ================= Add Event Page Styling ================= */
+
+/* Form container */
+.form-container {
+    width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #ffee32;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+/* Form header */
+.form-container h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #ff5400;
+}
+
+/* Labels */
+.form-container label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #2a0800;
+}
+
+/* Input fields */
+.form-container input,
+.form-container textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #6a0572;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    background: #f7cad0;
+}
+
+/* Button row for spacing */
+.button-row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;  /* Increased margin for better spacing */
+}
+
+/* Adjust button spacing */
+.button-row .btn {
+    flex: 1;
+    margin: 0 5px;
+}
+
+/* Gray button for cancel */
+.gray { background: #6c757d; }
+.gray:hover { background: #5a6268; }
+
+/* ================= Event List Styling ================= */
+
+/* Centered Container */
 .event-container {
-    width: 90%;
-    max-width: 750px;
-    padding: 25px;
-    background: rgba(255, 255, 255, 0.95);
-    border-radius: 12px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    width: 80%;
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #ffddd2;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
 
+/* Table Styling */
 .event-table {
     width: 100%;
     border-collapse: collapse;
@@ -167,22 +239,46 @@ body {
     text-align: center;
 }
 
+/* Make headers bold */
 .event-table th {
-    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
     font-weight: bold;
-    color: #333;
+    background: #ff9f1c;
 }
 
-.event-table tr:nth-child(even) {
-    background: #f8f9fa;
+/* Align text left inside cells */
+.event-table td {
+    text-align: center;
 }
 
-.action-buttons {
+/* Button Container */
+.button-container {
+    margin-top: 15px;
     display: flex;
     justify-content: center;
-    gap: 10px;
+    gap: 15px;
 }
 
+/* Button Styling */
+.btn {
+    padding: 10px 15px;
+    font-size: 14px;
+    border-radius: 5px;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.blue { background: #ff006e; color: white; }
+.blue:hover { background: #d90368; }
+
+.red { background: #f71735; color: white; }
+.red:hover { background: #c1121f; }
+
+.green { background: #06d6a0; color: white; }
+.green:hover { background: #028090; }
+
+/* Centering Back to Events Button */
 .back-button-container {
     display: flex;
     justify-content: center;
@@ -192,23 +288,40 @@ body {
 .back-button {
     background: #6c757d;
     color: white;
-    padding: 12px 18px;
+    padding: 10px 15px;
     text-decoration: none;
-    border-radius: 8px;
-    font-weight: bold;
-    transition: 0.3s;
+    border-radius: 5px;
 }
 
 .back-button:hover {
     background: #5a6268;
-    transform: scale(1.05);
 }
 
-@media (max-width: 768px) {
-    .auth-container, .container, .event-container {
-        width: 90%;
-    }
-    .button-container {
-        flex-wrap: wrap;
-    }
+/* Table Styling */
+.event-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.event-table th, .event-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+.event-table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+/* Align Edit & Delete Buttons in One Line */
+.action-buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between buttons */
+}
+
+.delete-form {
+    margin: 0;
 }
