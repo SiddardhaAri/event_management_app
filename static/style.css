@@ -1,23 +1,4 @@
-/* CSS Variables for easy customization */
-:root {
-    --primary-color: #009688;
-    --secondary-color: #00796b;
-    --accent-blue: #007bff;
-    --accent-green: #28a745;
-    --accent-red: #e74c3c;
-    --text-dark: #333;
-    --text-light: #666;
-    --bg-light: #f8f9fa;
-    --border-color: #dee2e6;
-    --spacing-sm: 10px;
-    --spacing-md: 15px;
-    --spacing-lg: 25px;
-    --border-radius: 8px;
-    --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    --input-padding: 10px 12px;
-}
-
-/* Base Reset and Global Styles */
+/* Reset default margin and padding */
 * {
     margin: 0;
     padding: 0;
@@ -25,159 +6,197 @@
     font-family: 'Poppins', sans-serif;
 }
 
+/* Centering the form container */
+.auth-container {
+    width: 380px;
+    margin: 80px auto;
+    padding: 25px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    text-align: left;
+    transition: transform 0.3s ease-in-out;
+}
+
+.auth-container:hover {
+    transform: translateY(-5px);
+}
+
+/* Page background */
 body {
-    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(135deg, #e0eafc, #cfdef3);
-    padding: var(--spacing-md);
+    height: 100vh;
+    background: linear-gradient(135deg, #667eea, #764ba2);
 }
 
-/* Reusable Card Style */
-.card {
-    background: white;
-    border-radius: var(--border-radius);
-    box-shadow: var(--shadow);
-    padding: var(--spacing-lg);
-    width: 100%;
-    max-width: 420px;
-    margin: var(--spacing-md) auto;
-}
-
-/* Auth Container */
-.auth-container {
-    background: white;
-    border-radius: var(--border-radius);
-    box-shadow: var(--shadow);
-    padding: var(--spacing-lg);
-    width: 380px;
-    margin: 100px auto;
-    text-align: left;
-}
-
+/* Form heading */
 .auth-container h2 {
     text-align: center;
     font-size: 24px;
     margin-bottom: 20px;
-    color: var(--text-dark);
+    color: #333;
 }
 
-/* Form Elements */
-label {
-    display: block;
-    font-size: 15px;
-    margin-bottom: 6px;
-    font-weight: 600;
-    color: var(--text-light);
-}
-
-input, textarea {
-    width: 100%;
-    padding: var(--input-padding);
-    border: 1px solid var(--border-color);
-    border-radius: var(--border-radius);
-    margin-bottom: var(--spacing-md);
-    font-size: 14px;
-    transition: border-color 0.3s ease;
-}
-
-input:focus, textarea:focus {
-    outline: none;
-    border-color: var(--primary-color);
-    box-shadow: 0 0 0 3px rgba(0, 150, 136, 0.1);
-}
-
-/* Buttons */
-.btn {
-    display: inline-block;
-    padding: 12px;
-    border-radius: var(--border-radius);
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.3s;
-    text-align: center;
-    border: none;
-}
-
-.btn-primary {
-    background: var(--primary-color);
-    color: white;
-}
-
-.btn-primary:hover {
-    background: var(--secondary-color);
-}
-
-.btn-danger {
-    background: var(--accent-red);
-    color: white;
-}
-
-.btn-danger:hover {
-    background: #c0392b;
-}
-
-/* Flash Messages */
+/* Flash messages */
 .flash-message {
+    background: #d1ecf1;
+    color: #0c5460;
     padding: 12px;
     border-radius: 6px;
     margin-bottom: 12px;
     text-align: center;
+}
+
+/* Labels */
+.auth-container label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #555;
+}
+
+/* Input fields */
+.auth-container input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    transition: all 0.3s ease-in-out;
+}
+
+.auth-container input:focus {
+    border-color: #667eea;
+    outline: none;
+    box-shadow: 0 0 5px rgba(102, 126, 234, 0.5);
+}
+
+/* Buttons */
+.auth-container button {
+    width: 100%;
+    padding: 12px;
+    background: #6c5ce7;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 6px;
+    margin-top: 10px;
+    transition: background 0.3s;
+}
+
+.auth-container button:hover {
+    background: #4834d4;
+}
+
+/* Links */
+.auth-container p {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.auth-container a {
+    color: #6c5ce7;
+    text-decoration: none;
     font-weight: bold;
 }
 
-.flash-success {
-    background: #d1ecf1;
-    color: #0c5460;
+.auth-container a:hover {
+    text-decoration: underline;
 }
 
-/* Event List Styles */
-.event-container {
-    width: 85%;
-    max-width: 750px;
-    background: white;
-    border-radius: var(--border-radius);
-    box-shadow: var(--shadow);
-    padding: var(--spacing-lg);
+/* ========== EVENT LIST PAGE ========== */
+.container {
+    width: 650px;
     margin: 50px auto;
+    padding: 25px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+
+.header {
+    font-size: 26px;
+    margin-bottom: 20px;
+    color: #333;
 }
 
 .event-table {
     width: 100%;
     border-collapse: collapse;
-    margin: 15px 0;
+    margin-top: 15px;
+    border-radius: 8px;
+    overflow: hidden;
 }
 
 .event-table th, .event-table td {
     padding: 12px;
-    border-bottom: 1px solid var(--border-color);
+    border-bottom: 1px solid #ddd;
     text-align: center;
 }
 
 .event-table th {
-    background: var(--bg-light);
+    background: #f1f1f1;
     font-weight: bold;
+    color: #333;
 }
 
-/* Responsive Design */
-@media (max-width: 480px) {
-    .auth-container, .event-container {
-        width: 95%;
-        padding: var(--spacing-md);
-    }
-    
-    .event-table {
-        display: block;
-        overflow-x: auto;
-    }
-}
-
-/* Utility Classes */
-.text-center { text-align: center; }
-.mt-20 { margin-top: 20px; }
-.flex-center {
+/* Button Styling */
+.button-container {
     display: flex;
     justify-content: center;
-    gap: 15px;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.btn {
+    padding: 10px 15px;
+    color: white;
+    font-size: 14px;
+    border-radius: 6px;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.blue { background: #6c5ce7; }
+.blue:hover { background: #4834d4; }
+
+.green { background: #28a745; }
+.green:hover { background: #218838; }
+
+.red { background: #dc3545; }
+.red:hover { background: #c82333; }
+
+.gray { background: #6c757d; }
+.gray:hover { background: #5a6268; }
+
+/* Back Button */
+.back-button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.back-button {
+    background: #6c757d;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background 0.3s;
+}
+
+.back-button:hover {
+    background: #5a6268;
+}
+
+/* Smooth hover effects for form */
+.form-container:hover, .event-container:hover {
+    transform: scale(1.02);
 }
